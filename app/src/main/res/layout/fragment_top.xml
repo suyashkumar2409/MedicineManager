@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TopActivity"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="1 Jan \n Monday"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_red"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/date_margin_top"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:id="@+id/todaysDate"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/morning"
+        android:layout_marginLeft="@dimen/top_data_margin"
+        android:layout_marginTop="30dp"
+        android:id="@+id/morning_marker"/>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/top_data_margin"
+        android:id="@+id/top_morning_list">
+    </ListView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/afternoon"
+        android:layout_marginLeft="@dimen/top_data_margin"
+        android:id="@+id/afternoon_marker"
+        android:layout_marginTop="30dp"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/top_data_margin"
+        android:id="@+id/top_afternoon_list">
+    </ListView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/evening"
+        android:layout_marginLeft="@dimen/top_data_margin"
+        android:layout_marginTop="30dp"
+        android:id="@+id/evening_marker"/>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/top_data_margin"
+        android:id="@+id/top_evening_list">
+    </ListView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/night"
+        android:layout_marginLeft="@dimen/top_data_margin"
+        android:layout_marginTop="30dp"
+        android:id="@+id/night_marker"/>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/top_data_margin"
+        android:id="@+id/top_night_list">
+    </ListView>
+</LinearLayout>

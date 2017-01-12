@@ -1,0 +1,22 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--Drawers-->
+    <dimen name="drawer_width">240dp</dimen>
+
+    <!--Top Fragment-->
+    <dimen name="date_margin_top">60dp</dimen>
+    <dimen name="top_data_margin">30dp</dimen>
+
+
+    <!--New Medicine -->
+    <dimen name="medicine_marginTop">10dp</dimen>
+    <dimen name="medicine_pic_width">300dp</dimen>
+    <dimen name="medicine_pic_height">180dp</dimen>
+
+    <!--Medicine Display-->
+    <dimen name="medicine_display_pic_width">150dp</dimen>
+    <dimen name="medicine_display_pic_height">90dp</dimen>
+</resources>

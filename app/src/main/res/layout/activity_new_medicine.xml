@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.suyashkumar.medicinescheduler.NewMedicine"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<GridLayout android:id="@+id/activity_new_medicine"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:columnCount="2">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/medicine_medicine_name"
+        android:textAppearance="?android:textAppearanceMedium"/>
+
+    <EditText
+        android:id="@+id/medicine_medicine_name"
+        android:layout_gravity="fill_horizontal"
+        android:hint="@string/medicine_medicine_name_hint"
+
+        />
+
+    <TextView
+        android:text="@string/medicine_essential"
+        android:layout_columnSpan="2"
+        android:id="@+id/name_essential"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/medicine_frequency"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_marginTop="@dimen/medicine_marginTop"
+        />
+
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/medicine_marginTop"
+        >
+    <Spinner
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:id="@+id/medicine_frequency_options_1"
+        android:layout_gravity="fill_horizontal"
+        android:hint="@string/medicine_medicine_name_hint"
+        android:entries="@array/medicine_frequency_options"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/medicine_frequency_options_2"
+            android:visibility="gone"
+            >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            android:text="Every " />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="fill_horizontal"
+            android:numeric="integer"
+            android:text="0"
+            android:id="@+id/medicine_every_dash_days"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            android:text=" Days"/>
+        </LinearLayout>
+    </LinearLayout>
+    <GridLayout
+        android:layout_column="1"
+        android:columnCount="4"
+        android:rowCount="2"
+        >
+        <CheckBox
+            android:id="@+id/medicine_checkbox_morning"
+            android:layout_row="0"
+            />
+        <TextView
+            android:text="@string/morning" />
+        <CheckBox
+            android:id="@+id/medicine_checkbox_afternoon"
+            android:layout_row="0" />
+
+        <TextView
+            android:text="@string/afternoon"
+            android:layout_row="0" />
+
+        <CheckBox
+            android:id="@+id/medicine_checkbox_evening"
+            android:layout_marginTop="@dimen/medicine_marginTop"
+            />
+        <TextView
+            android:text="@string/evening"
+            android:layout_marginTop="@dimen/medicine_marginTop"
+            />
+        />
+        <CheckBox
+            android:id="@+id/medicine_checkbox_night"
+            android:layout_marginTop="@dimen/medicine_marginTop"
+            />
+        <TextView
+            android:text="@string/night"
+            android:layout_marginTop="@dimen/medicine_marginTop"
+            />
+
+    </GridLayout>
+
+    <TextView
+        android:text="Must pick one of the four!"
+        android:layout_columnSpan="2"
+        android:id="@+id/frequency_essential"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/medicine_start_date"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_marginTop="@dimen/medicine_marginTop"
+        />
+
+    <EditText
+        android:text="1 Jan 2016"
+        android:layout_gravity="fill_horizontal"
+        android:id="@+id/medicine_date_picker"
+        android:focusable="false"
+        android:layout_marginTop="@dimen/medicine_marginTop"
+        />
+
+    <TextView
+        android:text="@string/medicine_essential"
+        android:layout_columnSpan="2"
+        android:id="@+id/date_essential"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/medicine_duration"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_marginTop="@dimen/medicine_marginTop"
+        />
+
+    <RadioGroup
+        android:id="@+id/medicine_duration_choice"
+        android:layout_marginTop="@dimen/medicine_marginTop"
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medicine_always"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medicine_no_of_days"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:numeric="integer"
+                android:id="@+id/duration_days"
+                android:visibility="gone"/>
+    </RadioGroup>
+
+    <TextView
+        android:text="@string/medicine_essential"
+        android:layout_columnSpan="2"
+        android:id="@+id/duration_essential"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/medicine_picture"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_marginTop="@dimen/medicine_marginTop"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/medicine_pic_width"
+        android:layout_height="@dimen/medicine_pic_height"
+        android:text="Picture Picker"
+        android:layout_marginTop="@dimen/medicine_marginTop"
+        android:background="@color/colorAccent"
+        />
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/medicine_program_name"-->
+        <!--android:textAppearance="?android:textAppearanceMedium"-->
+        <!--android:layout_marginTop="@dimen/medicine_marginTop"-->
+        <!--/>-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/medicine_program_name"-->
+        <!--android:layout_gravity="fill_horizontal"-->
+        <!--android:hint="@string/medicine_program_name_hint"-->
+        <!--android:layout_marginTop="@dimen/medicine_marginTop" />-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/medicine_directions"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_marginTop="@dimen/medicine_marginTop"
+        />
+
+    <EditText
+        android:id="@+id/medicine_directions"
+        android:layout_gravity="fill_horizontal"
+        android:hint="@string/medicine_directions_hint"
+        android:layout_marginTop="@dimen/medicine_marginTop"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/medicine_current_inventory"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_marginTop="@dimen/medicine_marginTop"
+        />
+
+    <EditText
+        android:numeric="integer"
+        android:hint="0"
+        android:id="@+id/medicine_current_inventory"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginTop="@dimen/medicine_marginTop"
+        />
+
+    <Button
+        android:id="@+id/medicine_button_ok"
+        android:text="@string/medicine_create"
+        android:layout_marginTop="@dimen/medicine_marginTop"
+        android:layout_column="1"
+        android:onClick="submitMedicine" />
+
+</GridLayout>
+</ScrollView>
